@@ -67,11 +67,10 @@ export const SearchResults: FC = () => {
 
   return (
     <>
-      <Pagination totalPages={totalPages} />
       {paginate<TSearchResult>(
         searchResults,
         PAGE_SIZE,
-        parseInt(currentPage || '0')
+        parseInt(currentPage || '1')
       )?.map(({ title, subject, premium, identifier }) => (
         <SearchResultBox
           key={title}
