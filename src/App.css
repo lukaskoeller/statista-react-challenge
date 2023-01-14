@@ -1,0 +1,3 @@
+form {
+  inline-size: min(calc(theme(width.80) * 2), 100%);
+}
