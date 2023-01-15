@@ -1,7 +1,7 @@
 import { FC } from "react";
-import { useLoaderData, useSearchParams } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import { TSearchResponse } from "../../api";
-import { SearchResultBox } from "../../components/SearchResultBox";
+import { SearchResultBox } from "../../components";
 
 const KEY = 'favorites';
 

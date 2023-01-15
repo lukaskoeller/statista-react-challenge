@@ -2,7 +2,6 @@
 import { useEffect } from 'react';
 import { readSearch } from './api';
 import './App.css';
-import searchSvg from './assets/search_icon.svg';
 import { Form, Outlet, useLoaderData, useSubmit } from 'react-router-dom';
 import { TQuery } from './types';
 
@@ -82,13 +81,7 @@ function App() {
                   });
                 }}
               />
-              <button
-                type="submit"
-                className="flex items-center flex-nowrap gap-2 md:gap-4 button--primary !px-9 !my-0 !rounded-l-full"
-              >
-                <span className="hidden md:!block md:!visible text-white font-semibold">Statista-Suche</span>
-                <img className="inline" src={searchSvg} alt="Search" />
-              </button>
+              
             </Form>
           </div>
         </div>

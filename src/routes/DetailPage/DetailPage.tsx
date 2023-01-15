@@ -11,7 +11,7 @@ export const DetailPage: FC = () => {
 
   return (
     <section>
-      <h1 className="text-2xl text-brand-strong">{statistic?.title}</h1>
+      <h3 className="text-2xl text-brand-strong">{statistic?.title}</h3>
       <hr className="w-16 border-brand-neutral-3 my-3" />
       {statistic?.date && (
         <strong className="block mb-3">
