@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {
-  QueryClient,
-  QueryClientProvider,
-} from '@tanstack/react-query';
+// @todo
+// import {
+//   QueryClient,
+//   QueryClientProvider,
+// } from '@tanstack/react-query';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -14,7 +15,7 @@ import { DetailPage } from './routes/DetailPage';
 import { SearchResults } from './components';
 import { FavoritesPage } from './routes/FavoritesPage';
 
-const queryClient = new QueryClient();
+// const queryClient = new QueryClient(); @todo
 
 const router = createBrowserRouter([
   {
