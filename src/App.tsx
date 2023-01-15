@@ -4,6 +4,7 @@ import { readSearch } from './api';
 import './App.css';
 import { Form, Outlet, useLoaderData, useSubmit } from 'react-router-dom';
 import { TQuery } from './types';
+import { SubmitButton } from './components';
 
 export enum FormKey {
   SearchQuery = 'q',
@@ -65,6 +66,12 @@ function App() {
               //   if (query === null) return;
               //   setSearchQuery(query);
               // }}
+              onSubmit={(event) => {
+                const isFirstSearch = q == null;
+                  submit(event.currentTarget.form, {
+                    replace: !isFirstSearch,
+                  });
+              }}
             >
               <input
                 className="placeholder:italic placeholder:font-normal placeholder:text-brand-neutral-4 px-6 grow"
@@ -74,14 +81,15 @@ function App() {
                 name={FormKey.SearchQuery}
                 id={FormKey.SearchQuery}
                 defaultValue={q || ''}
-                onChange={(event) => {
-                  const isFirstSearch = q == null;
-                  submit(event.currentTarget.form, {
-                    replace: !isFirstSearch,
-                  });
-                }}
+                // @todo Can be actived if real time search is prefered.
+                // onChange={(event) => {
+                //   const isFirstSearch = q == null;
+                //   submit(event.currentTarget.form, {
+                //     replace: !isFirstSearch,
+                //   });
+                // }}
               />
-              
+              <SubmitButton />
             </Form>
           </div>
         </div>
