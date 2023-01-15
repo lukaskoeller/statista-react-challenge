@@ -1,8 +1,7 @@
-import { useQuery } from '@tanstack/react-query';
-import { FormEvent, useEffect, useState } from 'react';
+// import { useQuery } from '@tanstack/react-query';
+import { useEffect } from 'react';
 import { readSearch } from './api';
 import './App.css';
-import { SearchResults } from './components';
 import searchSvg from './assets/search_icon.svg';
 import { Form, Outlet, useLoaderData, useSubmit } from 'react-router-dom';
 import { TQuery } from './types';

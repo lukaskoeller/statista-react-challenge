@@ -12,6 +12,7 @@ import App, { loader as rootLoader } from './App';
 import './index.css';
 import { DetailPage } from './routes/DetailPage';
 import { SearchResults } from './components';
+import { FavoritesPage } from './routes/FavoritesPage';
 
 const queryClient = new QueryClient();
 
@@ -33,12 +34,17 @@ const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path: "/favorites",
+    loader: rootLoader,
+    element: <FavoritesPage />,
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <QueryClientProvider client={queryClient}>
+    {/* <QueryClientProvider client={queryClient}> */}
       <RouterProvider router={router} />
-    </QueryClientProvider>
+    {/* </QueryClientProvider> */}
   </React.StrictMode>,
 )
