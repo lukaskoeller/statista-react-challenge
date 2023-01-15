@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "test:e2e": "npx playwright test",
     "test:ct": "playwright test -c playwright-ct.config.ts",
-    "test": "npm test:e2e & npm test:ct"
+    "test": "npm run test:e2e & npm run test:ct"
   },
   "dependencies": {
     "@tanstack/react-query": "^4.22.0",
