@@ -111,9 +111,14 @@ html {
   width: 100%;
 }
 
-html, body { 
+body { 
   min-block-size: 100%;
-  scrollbar-gutter: stable;
+}
+
+@media (min-width: 1536px) {
+  body {
+    overflow-y: scroll;
+  }
 }
 
 .button--primary,
