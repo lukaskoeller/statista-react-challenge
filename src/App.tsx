@@ -5,6 +5,7 @@ import './App.css';
 import { Form, Outlet, useLoaderData, useSubmit } from 'react-router-dom';
 import { TQuery } from './types';
 import { SubmitButton } from './components';
+import { useScrollToTop } from './utils';
 
 export enum FormKey {
   SearchQuery = 'q',
@@ -29,6 +30,7 @@ export async function loader({ request }: { request: Request }) {
 }
 
 function App() {
+  useScrollToTop();
   const submit = useSubmit();
   const { q } = useLoaderData() as unknown as { q: TQuery };
   
