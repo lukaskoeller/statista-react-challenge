@@ -111,6 +111,11 @@ html {
   width: 100%;
 }
 
+html, body { 
+  min-block-size: 100%;
+  scrollbar-gutter: stable;
+}
+
 .button--primary,
 .button.colOne,
 .buttonHover--primary:hover {
